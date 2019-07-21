@@ -1,0 +1,9 @@
+<h1>Все фильмы</h1>
+<% @film.each do |film| %>
+  <div class="well">
+  <p><%= film.title %></p>
+  <p><%= film.body %></p>
+  <p><%= film.rating %></p>
+  <%= link_to "Полная информация о фильме", film_path(film), :class => 'btn btn-default' %>
+  </div>
+<% end %>

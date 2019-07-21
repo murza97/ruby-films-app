@@ -1,0 +1,10 @@
+<h2>Отфильтрованные фильмы</h2>
+<% @film.each do |film| %>
+  <div class="well">
+  <p><%= film.title %></p>
+  <p><%= film.year %></p>
+  <p><%= film.country %></p>
+  <p><%= film.rating %></p>
+  <p><%= film.kind %></p>
+  </div>
+<% end %>

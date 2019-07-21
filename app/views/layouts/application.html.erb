@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Films</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'%>
+
+
+  </head>
+  <body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+      <h5 class="my-0 mr-md-auto font-weight-normal"><strong>Films</strong></h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <span class="p-2 text-dark" href="#"><%= link_to "Список фильмов",films_path %> </span>
+        <span class="p-2 text-dark" href="#"><%= link_to "Добавление фильма",new_film_path %> </span>
+        <span class="p-2 text-dark" href="#"><%= link_to "Сортировка по рейтингу",sortra_path %> </span>
+        <span class="p-2 text-dark" href="#"><%= link_to "Сортировка по году выпуска",sortye_path %> </span>
+        <span class="p-2 text-dark" href="#"><%= link_to "Фильтрация",filtering_params_path %> </span>
+      </nav>
+    </div>
+
+    <div class="container">
+    <%= yield %>
+    </div>
+  </body>
+</html>

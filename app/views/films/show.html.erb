@@ -1,0 +1,6 @@
+<h1><%= @film.title %></h1>
+<p><%= @film.body %></p>
+<p><%= image_tag @film.picture %></p>
+<hr>
+<%= link_to "Редактировать фильм", edit_film_path(@film), :class => 'btn btn-warning' %>
+<%= link_to "Удалить информацию", film_path(@film), method: :delete, data: {confirm:"Вы точно хотите удалить запись?"}, :class => 'btn btn-danger' %>

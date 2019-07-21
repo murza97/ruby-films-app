@@ -1,0 +1,9 @@
+<h2>Отсортированные фильмы</h2>
+<% @film.each do |film| %>
+  <div class="well">
+  <p><%= film.title %></p>
+  <p><%= film.body %></p>
+  <p><%= film.year %></p>
+
+  </div>
+<% end %>
