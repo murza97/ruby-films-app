@@ -1,6 +1,7 @@
 class FilmsController < ApplicationController
   http_basic_authenticate_with name: 'Admin', password: '89141',
                                except: %i[guest show create new]
+
   def index
     @film = Film.all
   end
@@ -39,7 +40,7 @@ class FilmsController < ApplicationController
     if(@file.update(film_params))
       redirect_to @file
     else
-      render 'edit'
+      render :edit
     end
   end
 
